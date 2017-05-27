@@ -12,7 +12,7 @@ RUN apt-get update && apt-get install -y \
 RUN mkdir local
 RUN wget -c -O "jdk.tar.gz" --no-check-certificate --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u131-b11/d54c1d3a095b4ff2b6607d096fa80163/jdk-8u131-linux-x64.tar.gz"
 RUN wget -O "spark.tgz" https://d3kbcqa49mib13.cloudfront.net/spark-2.1.1-bin-without-hadoop.tgz
-RUN wget -O "hadoop.tar.gz" http://www.apache.org/dyn/closer.cgi/hadoop/common/hadoop-3.0.0-alpha2/hadoop-3.0.0-alpha2.tar.gz
+RUN wget -O "hadoop.tar.gz" http://apache.fayea.com/hadoop/common/hadoop-3.0.0-alpha2/hadoop-3.0.0-alpha2.tar.gz 
 RUN tar -zxf jdk.tar.gz && rm jdk.tar.gz && mv jdk1.8.0_131 local/jdk
 RUN tar -zxf spark.tgz && rm spark.tgz && mv spark-2.1.1-bin-without-hadoop local/spark
 RUN tar -zxf hadoop.tar.gz && rm hadoop.tar.gz && mv hadoop-3.0.0-alpha2 local/hadoop
